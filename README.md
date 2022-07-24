@@ -1,4 +1,4 @@
-# cs.money-scripts
+# old.cs.money scripts
 
 #### [Script №1](https://github.com/bhorc/old.cs.money-scripts/blob/main/full%20screen%20user%20inventory.js): Делает весь ваш инвентарь на весь экран, вставить в консоль и нажать enter 
 
