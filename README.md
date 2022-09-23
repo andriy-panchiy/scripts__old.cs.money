@@ -10,7 +10,7 @@
 </details>
 
 <details>
-  <summary><b><a href="https://github.com/bhorc/scripts__old.cs.money/blob/main/total%20profit%20per%20month.js">Script №2</a>: Данный скрипт считает чистую прибыль ихсодя из продаж в разделе PURCHASES AND SALES на old.cs.money</b></summary>
+  <summary><b><a href="https://github.com/bhorc/scripts__old.cs.money/blob/main/total%20profit%20per%20month.js">Script №2</a>: Данный скрипт считает чистую прибыль ихсодя из продаж в разделе PURCHASES AND SALES на old.cs.money, зайти во вкладку PURCHASES AND SALES и вставить в консоль, нажать enter </b></summary>
   <p>
 
   Тут пока ничего нет...
