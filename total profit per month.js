@@ -1,6 +1,6 @@
-purchasesSales._arrayPurchases.filter(item => {
-    let date1 = new Date('11.10.2022').getTime(); // month.day.year
-    let date2 = new Date(item.update_time * 1000).getTime();
-    let daysLag = Math.ceil(Math.abs(date2 - date1) / (1000 * 3600 * 24));
-    return item.status === 'sold' && daysLag <= 31;
-}).map(item => (item.custom_price - item.custom_price / 100 * 7) - item.listing_price).reduce((partialSum, a) => partialSum + a, 0);
+purchasesSales._arrayPurchases.filter(({ status, update_time }) => {
+    let dateStart  = new Date('01.10.2023').getTime(); // month.day.year
+    let dateFinish = new Date('02.10.2023').getTime(); // month.day.year
+    let dateSold = new Date(update_time * 1000).getTime();
+    return status === 'sold' && dateStart < dateSold && dateSold < dateFinish;
+}).map(({ custom_price, listing_price, fee }) => custom_price - listing_price - fee).reduce((sum, num) => sum + num, 0);
