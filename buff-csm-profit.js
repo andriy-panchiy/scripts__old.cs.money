@@ -1,8 +1,8 @@
-buff_csm_platform_diff = 1.68013468; // csm price AK-47 | Redline (Field-Tested) / buff price AK-47 | Redline (Field-Tested)
-currency_cny_dollar = 6.9582; // 1$ = 6.9582¥
-buff_buys = {} // https://buff.163.com/api/market/buy_order/history?game=csgo&page_num=1&page_size=1000&state=success
+let buff_csm_platform_diff = 1.68013468; // csm price AK-47 | Redline (Field-Tested) / buff price AK-47 | Redline (Field-Tested)
+let currency_cny_dollar = 6.9582; // 1$ = 6.9582¥
+let buff_buys = {} // https://buff.163.com/api/market/buy_order/history?game=csgo&page_num=1&page_size=1000&state=success
 
-buff_buys = buff_buys.data.items.map((item) => {
+let buff_buys = buff_buys.data.items.map((item) => {
   item.goods_infos = buff_buys.data.goods_infos[item.goods_id];
   return item;
 });
