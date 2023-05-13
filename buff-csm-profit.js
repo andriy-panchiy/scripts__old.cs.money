@@ -24,18 +24,15 @@ purchasesSales._arrayPurchases
     return acc;
   }, [])
   .map((item) => {
-    let difference;
-    let def = item.csm?.price || skinsBaseList[730][item.name_id].a;
+    let profit;
     const csm_price = item.csm.custom_price - item.csm.fee;
+    const csm_deff = item.csm.listing_price || item.csm.price || skinsBaseList[730][item.csm.name_id].a;
     if (item.buff) {
       const buff_price = (item.buff.price * buff_csm_platform_diff) / currency_cny_dollar;
-      difference = +(csm_price - buff_price).toFixed(2);
-      def = Math.min(item.csm?.price || skinsBaseList[730][item.name_id].a, item.buff.price);
+      profit = +(csm_price - buff_price).toFixed(2);
     } else {
-      difference = +csm_price.toFixed(2);
+      profit = +(csm_price - csm_deff).toFixed(2);
     }
-
-    let profit = difference - def;
 
     return profit;
   })
